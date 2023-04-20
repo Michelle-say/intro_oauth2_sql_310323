@@ -25,6 +25,6 @@ class LoginUserSchema(BaseModel):
 
 
 class UserResponse(UserBaseSchema):
-    id: uuid.UUID
+    id: int
     created_at: datetime
     updated_at: datetime

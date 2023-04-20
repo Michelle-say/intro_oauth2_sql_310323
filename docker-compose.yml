@@ -1,14 +1,12 @@
 version: '3'
 services:
-  postgres:
-    image: postgres
-    container_name: postgres
+  mysql:
+    image: mysql:8.0-debian
+    container_name: mysql
     ports:
-      - '6502:5432'
+      - '6000:3306'
     restart: always
     env_file:
       - ./.env
     volumes:
-      - postgres-db:/var/lib/postgresql/data
-volumes:
-  postgres-db:
+      - ~/db/mysql-db:/var/lib/mysql/
